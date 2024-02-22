@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당첨자 목록</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: darkgreen;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .winner-list {
+            list-style-type: none;
+            padding: 0;
+            text-align : center
+        }
+        .winner-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 3px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .container-3 {
+            border-radius: 5px;
+        }
+        .container-3 {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .home {
+            text-align : center;
+        }
+        .text {
+            text-align : center;
+            border-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🥳당첨자 목록🎉</h1>
+        <ul class="winner-list">
+            {% for rank, winner in result %}
+            <li>{{rank}}: {{ winner }}</li>
+            {% endfor %}
+        </ul>
+        <h2 class="container-2"> 상품 목록 : "인형 / 텀블러 / 키링" </h2>
+        <div class="home"> 1등부터 순차적으로 상품 선택권이 부여됩니다. <br/>VITAL 계정으로 원하시는 상품 연락주시기 바랍니다. </div>
+    </div>
+    <div class="container-3">
+        <h2> ⭐추가 공지⭐ </h2>
+        <ul class="text">
+            이 이벤트를 끝으로 23년도 활동이 모두 종료됩니다.
+            <br>24-1학기부터는 더 새롭고 다양한 활동을 기획중이니 많은 지원 부탁드립니다.
+        </ul>
+    </div>
+</body>
+</html>
